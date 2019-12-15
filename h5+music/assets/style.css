@@ -1,0 +1,230 @@
+body {
+  background: #383b44;
+}
+.stage {
+  width: 900px;
+  margin: 20px auto;
+}
+.stage .ui {
+  width: 900px;
+  height: 90px;
+  color: black;
+  background: white;
+  border: 1px solid wheat;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.stage .ui .logo {
+  margin: 5px;
+  width: 115px;
+  height: 80px;
+  background: no-repeat;
+  background-size: 100% 100%;
+  background-position: center top;
+}
+.stage .ui .title {
+  width: 400px;
+  margin: 16px auto;
+}
+.stage .ui .title h3 {
+  display: inline;
+}
+.stage .ui .title p {
+  display: inline;
+}
+.stage .ui .title span {
+  display: inline;
+}
+.stage .ui .title .time {
+  float: right;
+  margin-right: -140px;
+}
+.stage .ui .controls {
+  margin: auto 20px;
+  width: 250px;
+}
+.stage .ui .controls span {
+  margin: auto 5px;
+  font-size: 18px;
+  position: relative;
+  padding: 12px;
+  text-align: center;
+  line-height: 70px;
+}
+.stage .ui .controls span:nth-child(2) {
+  font-size: 24px;
+}
+.stage .ui .controls span i.fa-play,
+.stage .ui .controls span i.fa-pause {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.stage .ui .controls span i.fa-play::before,
+.stage .ui .controls span i.fa-pause::before {
+  line-height: 58px;
+}
+.stage .ui .order {
+  position: absolute;
+  right: 200px;
+  top: 47%;
+}
+.stage .ui .order i.fa-align-justify,
+.stage .ui .order i.fa-random,
+.stage .ui .order i.fa-refresh {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: none;
+}
+.stage .ui .order i.fa-align-justify {
+  display: block;
+}
+.stage .ui .vo-up {
+  position: absolute;
+  top: 44%;
+  right: 130px;
+}
+.stage .ui .vo-up i.fa-volume-off,
+.stage .ui .vo-up i.fa-volume-up {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -20px;
+  right: 0;
+  margin: 0 auto;
+  display: none;
+}
+.stage .ui .vo-up i.fa-volume-off {
+  display: block;
+}
+.stage .ui .volume {
+  width: 100px;
+  height: 5px;
+  position: absolute;
+  top: 52%;
+  right: 30px;
+  background: #c5c2c2;
+}
+.stage .ui .volume .pro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #cf1616;
+}
+.stage .ui .volume .pro::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border: 3px solid wheat;
+  background: red;
+  float: right;
+  margin-right: -5px;
+  border-radius: 50%;
+}
+.stage .ui .volume input.slider {
+  line-height: 5px;
+  height: 5px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.stage .playlist li {
+  padding: 20px 30px;
+  background: white;
+  font-weight: lighter;
+  transition: all 0.5s;
+}
+.stage .playlist li.playing {
+  background: #f55c5c;
+  color: white;
+}
+.stage .playlist li.playing img {
+  animation: myrotate 3s linear infinite;
+}
+.stage .playlist li.paused img {
+  animation-play-state: paused;
+}
+.stage .playlist .thumb {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 15px;
+}
+.stage .playlist .thumb img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.stage .playlist .text {
+  line-height: 20px;
+}
+.stage .playlist .text h5 {
+  line-height: 25px;
+}
+.stage .playlist .text p {
+  line-height: 25px;
+}
+@keyframes myrotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.stage label {
+  position: absolute;
+  top: 55px;
+  left: -240px;
+  background: #c5c2c2;
+  display: block;
+  height: 5px;
+  overflow: hidden;
+  position: relative;
+  width: 650px;
+}
+.stage .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #cf1616;
+}
+.stage .progress::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border: 3px solid white;
+  background: red;
+  float: right;
+  margin-right: -5px;
+  border-radius: 50%;
+}
+.stage input {
+  line-height: 5px;
+  height: 5px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=./style.css.map */

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="https://cdn.bootcss.com/meyer-reset/2.0/reset.min.css" />
+		<link rel="stylesheet" href="js/index.js">
+	</head>
+	<body>
+		<!-- start header -->
+		<header>
+			<div class="nav">
+				<ul class="menu fl">
+					<li><a href="">Home</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Services</a></li>
+					<li><a href="">Products</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+				<form class="search fr">
+					<input type="text" placeholder="Search..." />
+				</form>
+			</div>
+
+			<!-- Cultivation -->
+			<div class="banner">
+				<h1>Cultivation</h1>
+			</div>
+			<!-- Cultivation -->
+
+			<!-- gird -->
+			<ul class="gird">
+				<li class="card">
+					<div class="content c1">
+						<img src="./imgs/icon4.png" alt="" />
+						<h3>Dolor nunc vule</h3>
+						<p>
+							Cras consequat iaculis lorem, id vehicula erat mattis quis. Vivamus laoreet velit justo, in
+							ven e natis purus.
+						</p>
+					</div>
+				</li>
+				<li class="card">
+					<div class="content c2">
+						<img src="./imgs/icon5.png" alt="" />
+						<h3>Dolor nunc vule</h3>
+						<p>
+							Cras consequat iaculis lorem, id vehicula erat mattis quis. Vivamus laoreet velit justo, in
+							ven e natis purus.
+						</p>
+					</div>
+				</li>
+				<li class="card">
+					<div class="content c3">
+						<img src="./imgs/icon6.png" alt="" />
+						<h3>Dolor nunc vule</h3>
+						<p>
+							Cras consequat iaculis lorem, id vehicula erat mattis quis. Vivamus laoreet velit justo, in
+							ven e natis purus.
+						</p>
+					</div>
+				</li>
+				<li class="card">
+					<div class="content c4">
+						<img src="./imgs/icon7.png" alt="" />
+						<h3>Dolor nunc vule</h3>
+						<p>
+							Cras consequat iaculis lorem, id vehicula erat mattis quis. Vivamus laoreet velit justo, in
+							ven e natis purus.
+						</p>
+					</div>
+				</li>
+			</ul>
+			<style>
+				.c1 {
+					position: relative;
+					left: -2000px;
+					visibility: hidden;
+					transition: all 2s;
+				}
+				.c1.active {
+					position: relative;
+					left: 0;
+					/* background: red; */
+					visibility: visible;
+				}
+				.c2 {
+					position: relative;
+					top: -2000px;
+					visibility: hidden;
+					transition: all 2s;
+				}
+				.c2.active {
+					position: relative;
+					top: 0;
+					/* background: red; */
+					visibility: visible;
+				}
+				.c3 {
+					position: relative;
+					top: -2000px;
+					visibility: hidden;
+					transition: all 2s;
+				}
+				.c3.active {
+					position: relative;
+					top: 0;
+					/* background: red; */
+					visibility: visible;
+				}
+				.c4 {
+					position: relative;
+					right: -2000px;
+					visibility: hidden;
+					transition: all 2s;
+				}
+				.c4.active {
+					position: relative;
+					right: 0;
+					/* background: red; */
+					visibility: visible;
+				}
+			</style>
+			<script>
+				var contents = document.querySelectorAll(".content");
+
+				document.body.onscroll = function() {
+					for (var i = 0; i < contents.length; i++) {
+						if (
+							window.pageYOffset >
+							contents[i].offsetTop - window.innerHeight + contents[i].offsetHeight
+						) {
+							contents[i].classList.add("active");
+						} else {
+							contents[i].classList.remove("active");
+						}
+					}
+				};
+				window.scrollTo(0, 1);
+			</script>
+			<!-- gird -->
+		</header>
+		<!-- end header -->
+
+		<!--1 strat About Us -->
+		<div class="container">
+			<h3>about us</h3>
+
+			<div class="about-img fl">
+				<img src="./imgs/img1.jpg" alt="" />
+			</div>
+
+			<div class="about-p fr">
+				<p>
+					Cras consequat iaculis lorem, id vehicula erat mattis quis. Vivamus laoreet velit justo, in ven e
+					natis purus pretium sit amet. Praesent lectus tortor, tincidu nt in consectetur vestibulum, ultrices
+					nec neque. Praesent nec sagittis mauris. Fusce convallis nunc neque. Integer egestas aliquam
+					interdum. Nulla ante diam, interdum nec tempus eu, feugiat vel erat.Cras consequat iaculis lorem, id
+					vehicula erat mattis quis.Cras consequat iaculis lorem, id vehicula erat mattis. Integer egestas
+					aliquam interdum. Nulla ante diam,
+				</p>
+
+				<p>
+					lorem,Cras consequat iaculis id vehicula erat mattis quis. Vivamus laoreet velit justo, in ven e
+					natis purus pretium sit amet. Praesent lectus tortor, tincidu nt in consectetur vestibulum, ultrices
+					nec neque. Praesent nec sagittis mauris. Fusce convallis nunc neque. Integer egestas aliquam
+					interdum. Nulla ante diam, interdum nec tempus eu, feugiat vel erat.Cras consequat iaculis lorem, id
+					vehicula erat mattis quis.Cras consequat iaculis lorem, id vehicula erat mattis.
+				</p>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!-- <style>
+			.about-p {
+				visibility: hidden;
+				position: relative;
+				left: -2000px;
+				transition: all 1s;
+			}
+			.about-p.active {
+				visibility: visible;
+				position: relative;
+				left: 0;
+			}
+		</style>
+		<script>
+			var aps = document.querySelectorAll(".about-p");
+
+			document.body.onscroll = function() {
+				for (var j = 0; j < aps.length; j++) {
+					if (window.pageYOffset > aps[j].offsetTop - window.innerHeight + aps[j].offsetHeight) {
+						aps[j].classList.add("active");
+					} else {
+						aps[j].classList.remove("active");
+					}
+				}
+			};
+			var oldMethod = window.onscroll;
+			if (typeof oldMethod == "function") {
+				window.onscroll = function() {
+					oldMethod.call(this);
+				};
+			}
+
+			// window.scrollTo(0, 1); -->
+		</script>
+		<!-- end About Us -->
+
+		<!--2 strat Our Services -->
+		<div class="service-section">
+			<div class="container">
+				<h3>Our Services</h3>
+				<ul>
+					<li class="col">
+						<div class="img"><img src="./imgs/icon1.png" alt="" /></div>
+						<h4>Dolor nunc vule putateulr</h4>
+						<p>
+							Cras consequat iaculis lorem, id vehicula erat mattis quis. Vivamus laoreet velit justo, in
+							ven e natis purus.Praesent nec sagittis mauris. Fusce convallis nunc neque.Integer
+							egestas.Vivamus laoreet velit justo
+						</p>
+					</li>
+					<li class="col">
+						<div class="img"><img src="./imgs/icon2.png" alt="" /></div>
+						<h4>Dolor nunc vule putateulr</h4>
+						<p>
+							Cras consequat iaculis lorem, id vehicula erat mattis quis. Vivamus laoreet velit justo, in
+							ven e natis purus.Praesent nec sagittis mauris. Fusce convallis nunc neque.Integer
+							egestas.Vivamus laoreet velit justo
+						</p>
+					</li>
+					<li class="col">
+						<div class="img"><img src="./imgs/icon3.png" alt="" /></div>
+						<h4>Dolor nunc vule putateulr</h4>
+						<p>
+							Cras consequat iaculis lorem, id vehicula erat mattis quis. Vivamus laoreet velit justo, in
+							ven e natis purus.Praesent nec sagittis mauris. Fusce convallis nunc neque.Integer
+							egestas.Vivamus laoreet velit justo
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!-- end Our Services -->
+
+		<!--3 strat Our Latest Works -->
+		<section class="works">
+			<h3>Our Latest Works</h3>
+			<ul class="grid">
+				<li>
+					<img src="./imgs/img1.jpg" alt="" />
+				</li>
+				<li>
+					<img src="./imgs/img2.jpg" alt="" />
+				</li>
+				<li>
+					<img src="./imgs/img3.jpg" alt="" />
+				</li>
+				<li>
+					<img src="./imgs/img4.jpg" alt="" />
+				</li>
+				<li>
+					<img src="./imgs/img5.jpg" alt="" />
+				</li>
+				<li>
+					<img src="./imgs/img6.jpg" alt="" />
+				</li>
+				<li>
+					<img src="./imgs/img7.jpg" alt="" />
+				</li>
+				<li>
+					<img src="./imgs/img8.jpg" alt="" />
+				</li>
+			</ul>
+		</section>
+		<!-- end Our Latest Works -->
+
+		<!--4 start Latest News -->
+		<section class="news">
+			<h3>Latest News</h3>
+			<ul class="grid">
+				<li>
+					<img src="./imgs/img10.jpg" alt="" />
+					<h4>Dolor nunc vule putateulr</h4>
+					<h5>March 23rd, 2015 <b>5 Comments</b></h5>
+					<p>
+						Praesent vestim molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit
+						varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					</p>
+					<div class="button">
+						<b>Read Move</b>
+						<div class="mask"></div>
+					</div>
+				</li>
+				<li>
+					<img src="./imgs/img11.jpg" alt="" />
+					<h4>Dolor nunc vule putateulr</h4>
+					<h5>March 23rd, 2015 <b>5 Comments</b></h5>
+					<p>
+						Praesent vestim molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit
+						varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					</p>
+					<div class="button">
+						<b>Read Move</b>
+						<div class="mask"></div>
+					</div>
+				</li>
+				<li>
+					<img src="./imgs/img12.jpg" alt="" />
+					<h4>Dolor nunc vule putateulr</h4>
+					<h5>March 23rd, 2015 <b>5 Comments</b></h5>
+					<p>
+						Praesent vestim molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit
+						varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					</p>
+					<div class="button">
+						<b>Read Move</b>
+						<div class="mask"></div>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<div class="clear"></div>
+		<!-- end Latest News -->
+
+		<!-- strat Upcome Events -->
+		<section class="categories">
+			<div class="grid">
+				<div class="col">
+					<h3>Upcome Events</h3>
+					<div class="img-name fl">
+						<img src="./imgs/im1.jpg" style="width: 100%" alt="" />
+					</div>
+					<div class="tl-name fr ml5">
+						<a>sagittis magna</a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+
+					<div class="img-name fl mt10">
+						<img src="./imgs/im2.jpg" style="width: 100%" alt="" />
+					</div>
+					<div class="tl-name fr mt10 ml5">
+						<a>sagittis magna</a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+
+					<div class="img-name fl mt10">
+						<img src="./imgs/im3.jpg" style="width: 100%" alt="" />
+					</div>
+					<div class="tl-name fr mt10 ml5">
+						<a>sagittis magna</a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+				</div>
+
+				<div class="col">
+					<h3>Categories</h3>
+					<ul class="categ">
+						<li>Praesent vestim molestie lacus.</li>
+						<li>Cras consequat iaculis lorem</li>
+						<li>Consectetur adipiscing iaculis</li>
+						<li>Lorem ipsum dolor sit</li>
+						<li>Cum sociis natoque penatibus et magnis</li>
+						<li>Integer molestie lorem</li>
+						<li>lorem,Cras consequat iaculis id vehicula</li>
+					</ul>
+				</div>
+
+				<div class="col">
+					<h3>Contact</h3>
+					<ul class="contact">
+						<li class="pone"></li>
+						<li class="tl">
+							<p>1-000-000-0000</p>
+							<p>1-000-000-0000</p>
+						</li>
+					</ul>
+					<ul class="contact">
+						<li class="map"></li>
+						<li class="tl">
+							<p>Seventh Avenue</p>
+							<p>Chelsea, Manhattan</p>
+						</li>
+					</ul>
+					<ul class="contact">
+						<li class="email"></li>
+						<li class="tl">
+							<p>fjashfaf@jkfs.ckd</p>
+							<p>bcdefg@hijs.dfh</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<div class="clear"></div>
+		<!-- end Upcome Events -->
+
+		<!-- strat footer -->
+		<footer>
+			<div class="container">
+				<div class="top">
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+					<li><a href=""></a></li>
+				</div>
+				<div class="mid">
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">Products</a></li>
+						<li><a href="">Blog</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</div>
+				<div class="buttom">
+					<p>
+						Copyright © 2015.Company name All rights reserved.More Templates <a href="">模板之家</a> -
+						Collect from
+						<a href="">网页模板</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!-- end footer -->
+	</body>
+</html>

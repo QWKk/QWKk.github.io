@@ -1,0 +1,119 @@
+/*全局*/
+.clear {
+  clear: both;
+}
+/*内容*/
+header {
+  width: 100%;
+}
+header .grid {
+  width: 1200px;
+  height: 120px;
+  margin: 0 auto;
+}
+header .grid .logo {
+  width: 500px;
+  height: 80px;
+  float: left;
+}
+header .grid .logo li {
+  float: left;
+}
+header .grid .logo p {
+  font-size: 32px;
+  font-weight: 800;
+  color: #101010;
+  display: block;
+  margin-top: 60px;
+}
+header .grid .logo img {
+  width: 270px;
+  height: 120px;
+}
+header .grid ul.nav {
+  float: right;
+  margin-top: -80px;
+}
+header .grid ul.nav li {
+  width: 136px;
+  height: 120px;
+  display: block;
+  float: left;
+  margin-right: 5px;
+  text-align: center;
+  line-height: 120px;
+}
+header .grid ul.nav li a {
+  color: black;
+  text-decoration: none;
+}
+header .grid ul.nav li:hover {
+  background: #fe6637;
+}
+section.menu {
+  width: 100%;
+  height: 800px;
+  background: url(../img/menu.png) no-repeat top;
+}
+section.ul {
+  width: 100%;
+}
+section.ul .nav {
+  width: 1200px;
+  margin: 0 auto;
+}
+section.ul .nav h3 {
+  text-align: center;
+}
+section.ul .nav h4 {
+  text-align: center;
+}
+section.ul .nav ul.menu li {
+  float: left;
+  margin-right: 100px;
+}
+section.about {
+  width: 100%;
+  height: 720px;
+  background: url(../img/about.jpg) no-repeat top;
+}
+section.about .nav h2 {
+  text-align: center;
+}
+section.about .nav h3 {
+  text-align: center;
+}
+section.about .nav ul {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+section.about .nav ul li {
+  width: 33.3%;
+  height: 500px;
+  float: left;
+}
+section.about .nav ul li img {
+  width: 100%;
+  height: 100%;
+}
+section.help {
+  width: 100%;
+}
+section.help .nav {
+  width: 1200px;
+  margin: 0 auto;
+}
+section.help .nav h3 {
+  text-align: center;
+}
+section.help .nav ul li {
+  width: 33.3%;
+  float: left;
+}
+section.new-img {
+  width: 100%;
+  height: 800px;
+  background: url(../img/news.jpg) no-repeat top;
+}
+/*# sourceMappingURL=./style.css.map */

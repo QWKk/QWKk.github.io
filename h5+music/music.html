@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>音乐播放器</title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css" />
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="./assets/style.css" />
+	</head>
+	<body>
+		<div class="stage">
+			<ul class="playlist">
+				<!-- <li>
+					<div class="thumb">
+						<img src="./assets/jay.jpg" alt="" />
+					</div>
+					<div class="text">
+						<h5>安静</h5>
+						<p>周杰伦</p>
+					</div>
+				</li> -->
+			</ul>
+
+			<div class="ui">
+				<div class="logo"></div>
+
+				<div class="controls">
+					<span><i class="fa fa-backward"></i></span>
+					<span> <i class="fa fa-pause"></i><i class="fa fa-play"></i></i></span>
+					<span><i class="fa fa-forward"></i></span>
+				</div>
+
+				<div class="title">
+					<h3>安静</h3>
+					<span>-</span>
+					<p>周杰伦</p>
+
+					<div class="time">
+						<span class="current">00:00</span>
+						<span>/</span>
+						<span class="duration">05:34</span>
+					</div>
+				</div>
+
+				<label for="">
+					<div class="progress"></div>
+					<input type="range" value="0" min="0" max="100" step="1" />
+				</label>
+
+				<div class="order">
+					<span>
+						<i class="fa fa-align-justify"></i>
+						<!-- 列表 -->
+						<i class="fa fa-random"></i>
+						<!-- 随机 -->
+						<i class="fa fa-refresh"></i>
+						<!-- 单曲 -->
+					</span>
+				</div>
+
+				<div class="vo-up">
+					<span>
+						<i class="fa fa-volume-up"></i>
+						<i class="fa fa-volume-off"></i>
+					</span>
+				</div>
+
+				<div class="volume">
+					<div class="pro"></div>
+					<input id="audio" type="range1" class="slider" value="0" min="0" max="100" step="1" />
+				</div>
+			</div>
+
+			<!-- <div class="controls">
+				<span><i class="fa fa-backward"></i></span>
+				<span><i class="fa fa-play"></i> <i class="fa fa-pause"></i></span>
+				<span><i class="fa fa-forward"></i></span>
+			</div> -->
+
+			<!-- <audio src="" autoplay controls style="height: 30px;"></audio> -->
+			<audio src="" style="height: 30px;" muted="false" ></audio>
+		</div>
+
+		<script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+		<script src="./assets/main.js"></script>
+	</body>
+</html>

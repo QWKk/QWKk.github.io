@@ -1,0 +1,257 @@
+body {
+	background: #383b44;
+}
+.stage {
+	width: 900px;
+	margin: 20px auto;
+	// display: flex;
+	// border: 1px solid greenyellow;
+
+	.ui {
+		width: 900px;
+		height: 90px;
+		color: black;
+		background: white;
+		border: 1px solid wheat;
+		position: relative;
+		display: flex;
+		justify-content: space-around;
+		overflow: hidden;
+
+		.logo {
+			margin: 5px;
+			width: 115px;
+			height: 80px;
+			background: no-repeat;
+			background-size: 100% 100%;
+			background-position: center top;
+		}
+
+		.title {
+			width: 400px;
+			margin: 16px auto;
+			h3 {
+				display: inline;
+			}
+			p {
+				display: inline;
+			}
+			span {
+				display: inline;
+			}
+
+			.time {
+				float: right;
+				margin-right: -140px;
+			}
+		}
+
+		.controls {
+			margin: auto 20px;
+			width: 250px;
+			span {
+				margin: auto 5px;
+				// border: 1px solid red;
+				font-size: 18px;
+				position: relative;
+				padding: 12px;
+				text-align: center;
+				line-height: 70px;
+
+				&:nth-child(2) {
+					font-size: 24px;
+				}
+
+				i.fa-play,
+				i.fa-pause {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					margin: auto;
+					&::before {
+						line-height: 58px;
+					}
+				}
+				
+			}
+		}
+
+		.order {
+			position: absolute;
+			right: 200px;
+			top: 47%;
+
+			i.fa-align-justify,
+			i.fa-random,
+			i.fa-refresh {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				display: none;
+			}
+			i.fa-align-justify {
+				display: block;
+			}
+		}
+
+		.vo-up {
+			position: absolute;
+			top: 44%;
+			right: 130px;
+
+			i.fa-volume-off,
+			i.fa-volume-up {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: -20px;
+				right: 0;
+				margin: 0 auto;
+				display: none;
+			}
+			i.fa-volume-off {
+				display: block;
+			}
+		}
+
+		.volume {
+			width: 100px;
+			height: 5px;
+			position: absolute;
+			top: 52%;
+			right: 30px;
+			background: rgb(197, 194, 194);
+
+			.pro {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0%;
+				height: 100%;
+				background: rgb(207, 22, 22);
+				&::after {
+					content: "";
+					display: block;
+					width: 5px;
+					height: 5px;
+					// padding: 5px;
+					border: 3px solid wheat;
+					border-radius: 50%;
+					background: red;
+					float: right;
+					margin-right: -5px;
+					border-radius: 50%;
+				}
+			}
+			input.slider {
+				line-height: 5px;
+				height: 5px;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.playlist {
+		li {
+			padding: 20px 30px;
+
+			background: white;
+			font-weight: lighter;
+			transition: all 0.5s;
+			&.playing {
+				background: #f55c5c;
+				color: white;
+				img {
+					animation: myrotate 3s linear infinite;
+				}
+			}
+			&.paused {
+				img {
+					animation-play-state: paused;
+				}
+			}
+		}
+		.thumb {
+			width: 50px;
+			height: 50px;
+			float: left;
+			margin-right: 15px;
+			img {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+			}
+		}
+		.text {
+			line-height: 20px;
+			h5 {
+				// margin: 0;
+				line-height: 25px;
+			}
+			p {
+				line-height: 25px;
+			}
+		}
+	}
+}
+@keyframes myrotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.stage label {
+	// margin: 50px 10px;
+	position: absolute;
+	top: 55px;
+	left: -240px;
+	background: rgb(197, 194, 194);
+	display: block;
+	height: 5px;
+	overflow: hidden;
+	position: relative;
+	width: 650px;
+}
+.stage .progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background: rgb(207, 22, 22);
+	&::after {
+		content: "";
+		display: block;
+		width: 5px;
+		height: 5px;
+		// padding: 5px;
+		border: 3px solid white;
+		border-radius: 50%;
+		background: red;
+		float: right;
+		margin-right: -5px;
+		border-radius: 50%;
+	}
+}
+.stage input {
+	line-height: 5px;
+	height: 5px;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
